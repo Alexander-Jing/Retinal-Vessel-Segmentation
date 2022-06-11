@@ -7,3 +7,4 @@ Our method is based on the Study Group Learning(SGL) method, trying to use the e
 ![our structure](https://github.com/Alexcander-Jing/Retinal-Vessel-Segmentation/blob/main/figs/model%20structure.png)  
 ## Results 
 Our work is performed on the DRIVE and CHASE Dataset, results are as the follows  
+![our results](https://github.com/Alexcander-Jing/Retinal-Vessel-Segmentation/blob/main/figs/results.png)  
