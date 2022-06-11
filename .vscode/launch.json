@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: main.py",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${fileDirname}",  //direction name
+            "program":"${workspaceFolder}/model_training/main.py",  // file main.py
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--self_ensemble",
+                    "--test_only",
+                    "--model", "CON_ENH",
+                    "--data_test", "DRIVET",
+                    "--n_GPUs", "1", 
+                    "--id_GPU", "0",
+                    "--data_range", "1-20",
+                    "--pre_train", "../pre_train/drive_model/model_latest.pt",
+                    "--save", "test_drive_k8_10_epoch_pc",
+                    "--reset",
+                    "--save_gt",
+                    "--save_results",]
+        }
+    ]
+}

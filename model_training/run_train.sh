@@ -1,0 +1,2 @@
+python main.py --self_ensemble --patch_size 256 --model CON_ENH --loss 1*BCE --data_train DRIVE --data_test DRIVET --n_GPUs 2 --id_GPU 0 --epochs 10 --data_range '1-20/1-20' --save drive_k8_10_epoch_pc --mark '_s8' --scale 1 --patch_size 256 --reset --save_gt --save_results
+#python main.py --dataset CHASE --self_ensemble --patch_size 256 --model CON_ENH --loss 1*BCE --data_train CHASE --data_test CHASET --n_GPUs 2 --id_GPU 2 --epochs 10 --data_range '1-20/1-8' --save chase_k8_10_epoch --mark '_s8' --scale 1 --patch_size 256 --reset --save_gt --save_results
