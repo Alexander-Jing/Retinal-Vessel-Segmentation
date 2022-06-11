@@ -1,0 +1,347 @@
+MainNet(
+  (s1): EnhanceNetve(
+    (conv1): Sequential(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): PReLU(num_parameters=1)
+      (2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv2): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv3): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv4): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv5): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (upconv1): ConvTranspose2d(64, 32, kernel_size=(2, 2), stride=(2, 2))
+    (upconv2): ConvTranspose2d(128, 64, kernel_size=(2, 2), stride=(2, 2))
+    (upconv3): ConvTranspose2d(256, 128, kernel_size=(2, 2), stride=(2, 2))
+    (upconv4): ConvTranspose2d(512, 256, kernel_size=(2, 2), stride=(2, 2))
+    (conv6): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv7): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv8): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv9): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv11): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(35, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(35, 6, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(6, 6, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (last_act): PReLU(num_parameters=1)
+  )
+  (s2): SegNetvec(
+    (conv1): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(6, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(6, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv2): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv3): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv4): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv5): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (upconv1): ConvTranspose2d(64, 32, kernel_size=(2, 2), stride=(2, 2))
+    (upconv2): ConvTranspose2d(128, 64, kernel_size=(2, 2), stride=(2, 2))
+    (upconv3): ConvTranspose2d(256, 128, kernel_size=(2, 2), stride=(2, 2))
+    (upconv4): ConvTranspose2d(512, 256, kernel_size=(2, 2), stride=(2, 2))
+    (conv6): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv7): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv8): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv9): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv11): Sequential(
+      (0): PReLU(num_parameters=1)
+      (1): BatchNorm2d(38, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Conv2d(38, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PReLU(num_parameters=1)
+      (4): BatchNorm2d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): Conv2d(1, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (last_act): PReLU(num_parameters=1)
+  )
+)
+[Epoch 1]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 1.5817]	39.0+9.7s
+[3200/16000]	[BCE: 1.5094]	36.4+6.0s
+[4800/16000]	[BCE: 1.4622]	36.8+8.1s
+[6400/16000]	[BCE: 1.4206]	36.7+5.3s
+[8000/16000]	[BCE: 1.3835]	37.1+6.4s
+[9600/16000]	[BCE: 1.3493]	37.0+6.4s
+[11200/16000]	[BCE: 1.3176]	37.2+9.0s
+[12800/16000]	[BCE: 1.2878]	40.6+5.1s
+[14400/16000]	[BCE: 1.2598]	44.2+10.2s
+[16000/16000]	[BCE: 1.2329]	41.3+4.0s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.716624 (Best: 0.716624 @epoch 1)
+Forward: 14.56s
+
+Saving...
+Total: 15.64s
+
+[Epoch 2]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.9560]	36.8+7.1s
+[3200/16000]	[BCE: 0.9347]	37.7+2.8s
+[4800/16000]	[BCE: 0.9152]	37.5+5.6s
+[6400/16000]	[BCE: 0.8974]	37.6+6.8s
+[8000/16000]	[BCE: 0.8794]	37.7+7.4s
+[9600/16000]	[BCE: 0.8625]	37.9+6.0s
+[11200/16000]	[BCE: 0.8459]	37.9+4.9s
+[12800/16000]	[BCE: 0.8307]	37.9+5.5s
+[14400/16000]	[BCE: 0.8159]	38.4+8.2s
+[16000/16000]	[BCE: 0.8013]	37.6+7.1s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.796205 (Best: 0.796205 @epoch 2)
+Forward: 14.45s
+
+Saving...
+Total: 15.60s
+
+[Epoch 3]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.6475]	37.6+10.2s
+[3200/16000]	[BCE: 0.6375]	38.0+6.4s
+[4800/16000]	[BCE: 0.6268]	37.9+7.1s
+[6400/16000]	[BCE: 0.6165]	38.1+7.8s
+[8000/16000]	[BCE: 0.6064]	38.1+5.1s
+[9600/16000]	[BCE: 0.5967]	37.7+5.7s
+[11200/16000]	[BCE: 0.5887]	37.6+7.9s
+[12800/16000]	[BCE: 0.5801]	38.1+5.5s
+[14400/16000]	[BCE: 0.5720]	37.9+6.1s
+[16000/16000]	[BCE: 0.5642]	37.9+5.5s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.825679 (Best: 0.825679 @epoch 3)
+Forward: 14.62s
+
+Saving...
+Total: 15.76s
+
+[Epoch 4]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.4804]	37.9+10.1s
+[3200/16000]	[BCE: 0.4745]	37.8+7.2s
+[4800/16000]	[BCE: 0.4686]	38.7+7.9s
+[6400/16000]	[BCE: 0.4633]	40.0+7.8s
+[8000/16000]	[BCE: 0.4582]	38.8+5.9s
+[9600/16000]	[BCE: 0.4530]	37.7+7.7s
+[11200/16000]	[BCE: 0.4480]	38.1+8.2s
+[12800/16000]	[BCE: 0.4433]	38.6+6.0s
+[14400/16000]	[BCE: 0.4387]	37.8+7.0s
+[16000/16000]	[BCE: 0.4346]	37.7+7.2s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.829668 (Best: 0.829668 @epoch 4)
+Forward: 14.62s
+
+Saving...
+Total: 15.72s
+
+[Epoch 5]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.3935]	37.9+8.6s
+[3200/16000]	[BCE: 0.3893]	37.6+6.8s
+[4800/16000]	[BCE: 0.3861]	37.4+6.1s
+[6400/16000]	[BCE: 0.3838]	37.8+8.1s
+[8000/16000]	[BCE: 0.3808]	38.1+3.3s
+[9600/16000]	[BCE: 0.3781]	37.6+8.1s
+[11200/16000]	[BCE: 0.3752]	37.9+5.3s
+[12800/16000]	[BCE: 0.3730]	37.5+8.3s
+[14400/16000]	[BCE: 0.3722]	37.4+6.9s
+[16000/16000]	[BCE: 0.3702]	37.6+4.7s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.830508 (Best: 0.830508 @epoch 5)
+Forward: 14.57s
+
+Saving...
+Total: 15.75s
+
+[Epoch 6]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.3480]	37.8+10.0s
+[3200/16000]	[BCE: 0.3459]	37.7+3.4s
+[4800/16000]	[BCE: 0.3446]	37.8+8.0s
+[6400/16000]	[BCE: 0.3425]	37.8+6.3s
+[8000/16000]	[BCE: 0.3403]	38.0+4.2s
+[9600/16000]	[BCE: 0.3398]	37.6+7.7s
+[11200/16000]	[BCE: 0.3388]	39.2+5.6s
+[12800/16000]	[BCE: 0.3377]	38.8+8.2s
+[14400/16000]	[BCE: 0.3364]	38.7+6.9s
+[16000/16000]	[BCE: 0.3350]	38.4+5.2s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.830169 (Best: 0.830508 @epoch 5)
+Forward: 14.46s
+
+Saving...
+Total: 15.51s
+
+[Epoch 7]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.3248]	38.1+8.6s
+[3200/16000]	[BCE: 0.3283]	37.7+6.7s
+[4800/16000]	[BCE: 0.3271]	37.6+9.8s
+[6400/16000]	[BCE: 0.3255]	37.8+4.6s
+[8000/16000]	[BCE: 0.3237]	37.5+7.5s
+[9600/16000]	[BCE: 0.3218]	37.8+6.5s
+[11200/16000]	[BCE: 0.3202]	37.7+7.3s
+[12800/16000]	[BCE: 0.3193]	37.8+4.5s
+[14400/16000]	[BCE: 0.3183]	37.9+6.2s
+[16000/16000]	[BCE: 0.3175]	37.8+6.0s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.831499 (Best: 0.831499 @epoch 7)
+Forward: 14.71s
+
+Saving...
+Total: 15.85s
+
+[Epoch 8]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.3088]	37.7+8.8s
+[3200/16000]	[BCE: 0.3076]	37.8+6.3s
+[4800/16000]	[BCE: 0.3071]	37.7+7.8s
+[6400/16000]	[BCE: 0.3075]	37.9+6.3s
+[8000/16000]	[BCE: 0.3067]	37.8+6.4s
+[9600/16000]	[BCE: 0.3065]	38.2+4.3s
+[11200/16000]	[BCE: 0.3057]	38.3+8.7s
+[12800/16000]	[BCE: 0.3052]	37.4+6.3s
+[14400/16000]	[BCE: 0.3054]	37.5+8.0s
+[16000/16000]	[BCE: 0.3047]	37.6+4.4s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.830745 (Best: 0.831499 @epoch 7)
+Forward: 14.74s
+
+Saving...
+Total: 15.70s
+
+[Epoch 9]	Learning rate: 1.00e-4
+[1600/16000]	[BCE: 0.3081]	38.4+12.6s
+[3200/16000]	[BCE: 0.3025]	38.1+5.6s
+[4800/16000]	[BCE: 0.3024]	38.0+7.1s
+[6400/16000]	[BCE: 0.3015]	38.5+9.6s
+[8000/16000]	[BCE: 0.3013]	38.0+7.9s
+[9600/16000]	[BCE: 0.3014]	37.9+7.7s
+[11200/16000]	[BCE: 0.3005]	37.6+6.8s
+[12800/16000]	[BCE: 0.3000]	38.1+6.4s
+[14400/16000]	[BCE: 0.2996]	38.0+8.6s
+[16000/16000]	[BCE: 0.2993]	37.6+5.9s
+
+Evaluation:
+[DRIVET x1]	DICE Score: 0.831767 (Best: 0.831767 @epoch 9)
+Forward: 14.77s
+
+Saving...
+Total: 15.98s
+

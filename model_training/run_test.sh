@@ -1,0 +1,2 @@
+python main.py --self_ensemble --test_only --model CON_ENH --data_test DRIVET --n_GPUs 1 --id_GPU 0 --data_range '1-20' --pre_train '../pre_train/drive_model/model_latest.pt' --save test_drive_k8_10_epoch_pc --reset --save_gt --save_results
+python main.py --dataset CHASE --self_ensemble --test_only --model CON_ENH --data_test CHASET --n_GPUs 1 --id_GPU 0 --data_range '1-8' --pre_train '../pre_train/chase_model/model_latest.pt' --save test_chase_k8_10_epoch_pc --reset --save_gt --save_results
